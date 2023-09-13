@@ -58,6 +58,14 @@ SELECT alunos.nome AS aluno, matriculas.curso
 FROM matriculas
 INNER JOIN alunos ON matriculas.aluno_id = alunos.id;
 
+SELECT autores.nome
+FROM autores
+LEFT JOIN livros ON autores.id = livros.autor_id
+GROUP BY autores.nome
+ORDER BY COUNT(livros.id) DESC
+LIMIT 1;
+
+
 
 
 
