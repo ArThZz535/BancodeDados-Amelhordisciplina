@@ -76,7 +76,11 @@ FROM alunos
 LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id
 GROUP BY alunos.nome;
 
-
+SELECT produto
+FROM vendas
+GROUP BY produto
+ORDER BY COUNT(*) DESC
+LIMIT 1;
 
 
 
