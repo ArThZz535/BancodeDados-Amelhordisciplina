@@ -65,6 +65,11 @@ GROUP BY autores.nome
 ORDER BY COUNT(livros.id) DESC
 LIMIT 1;
 
+SELECT produto
+FROM vendas
+GROUP BY produto
+ORDER BY SUM(receita)
+LIMIT 1;
 
 
 
